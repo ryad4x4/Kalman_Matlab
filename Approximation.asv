@@ -1,0 +1,19 @@
+function [X,P]=Approximation(dt,X,P,a)
+
+
+A=[1 dt;
+   0 1];
+
+G=[(dt^2)/2;
+    dt     ];
+
+
+X = A*X
+
+P= A*P*A'+G*a*G'
+
+
+D=[X
+
+end
+
